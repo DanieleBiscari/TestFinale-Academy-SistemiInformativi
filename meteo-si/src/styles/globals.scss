@@ -60,12 +60,15 @@ input::placeholder {
   font-size: clamp(5rem, 20vw, 10rem) !important;
 }
 
+.imageSize{
+  width: clamp(5rem, 20vw, 18rem) !important;
+}
+
 .pCustom{
-  padding: 0 20rem;
   align-content: center !important;
 }
 .fontCustom{
-  font-size: clamp(5rem, 20vw, 10rem) !important;
+  font-size: clamp(5rem, 20vw, 15rem) !important;
 }
 
 .flexCentered {
