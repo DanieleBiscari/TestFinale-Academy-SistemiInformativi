@@ -1,0 +1,240 @@
+:root {
+  --primary: #227df4;
+  --primaryHover: #106cbd;
+  --primaryDarker: #1763c7;
+  --secondary: #edf415;
+  --secondaryHover: #dae110;
+  --white: #f1f1f1;
+  --black: #2f2f2f;
+  --muted: #999898;
+}
+
+
+// DEFAULT SELECTOR
+main{
+  min-height: 95vh;
+  color: var(--black);
+}
+p{
+  font-size: clamp(1rem, 2vw, 1.5rem) !important;
+}
+table tbody td,
+th {
+  vertical-align: middle;
+}
+label {
+  color: var(--black);
+}
+input::placeholder {
+  color: var(--muted) !important;
+}
+
+//NAVBAR
+.userIcon:hover{
+  color: var(--white) !important;
+}
+
+// FORM 
+.linkAuth a {
+  color: var(--primary);
+}
+.linkAuth a:hover {
+  color: var(--primaryHover);
+}
+
+// BUTTON
+.btn-primary{
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+  font-weight: 500 !important; 
+}
+.btn-primary:hover{
+  background-color: var(--primaryHover) !important;
+  color: var(--white) !important; 
+  outline: none !important;
+}
+
+// PROFILE PAGE
+.profileIcon{
+  color: var(--primary);
+  font-size: clamp(5rem, 20vw, 10rem) !important;
+}
+
+.pCustom{
+  padding: 0 20rem;
+  align-content: center !important;
+}
+.fontCustom{
+  font-size: clamp(5rem, 20vw, 10rem) !important;
+}
+
+.flexCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 32rem !important;
+  aspect-ratio: 4/3 !important;
+}
+
+.card-body {
+  background-size: cover !important;
+  background-position: center !important;
+  color: var(--primary) !important;
+  text-shadow: 1px 1px black;
+}
+.card-body-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  backdrop-filter: blur(4px);
+  opacity: 0.5;
+}
+
+.edit-btn:hover {
+  color: rgb(96, 128, 255);
+}
+
+.trash-btn:hover {
+  color: rgb(255, 100, 100);
+}
+
+.nav-link {
+  color: var(--white) !important;
+  font-size: clamp(1rem, 1.5vw, 1.5rem) !important;
+  text-underline-offset: 0.3rem;
+}
+.nav-link:hover {
+  outline: 1px solid var(--white);
+}
+
+.loginContainer,
+.registerContainer {
+  padding: 8rem 4rem !important;
+  width: 40rem !important;
+
+  background: rgb(244,244,244);
+  background: -moz-linear-gradient(7deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(7deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(7deg, rgba(244,244,244,1) 0%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4",endColorstr="#ffffff",GradientType=1);
+  -webkit-box-shadow: 0px 7px 15px -7px #000000; 
+  box-shadow: 0px 7px 15px -7px #000000;
+}
+.loginForm {
+  min-width: 25rem;
+}
+
+
+
+.hover-background-change {
+  cursor: pointer;
+}
+.hover-background-change:hover {
+  background-color: #7eceff;
+}
+.hover-background-change a {
+  transition: 0.2s ease;
+  color: #3f3f3f;
+}
+.hover-background-change a:hover {
+  transform: scale(1.2);
+}
+
+.course-creation-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.submitButtonCustom {
+  width: max-content;
+  padding: 0.5rem 4rem !important;
+  margin: 0 auto;
+}
+
+// * Gestione della modale
+.myModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 30%;
+  left: 38%;
+  padding: 2rem;
+  background-color: white;
+  width: 20rem;
+  aspect-ratio: 4/3;
+  z-index: 3;
+}
+.overlay {
+  position: fixed;
+  background-color: #565656;
+  opacity: 20%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.5rem;
+}
+.my-modal-footer {
+  display: flex;
+  justify-content: center;
+}
+.my-modal-title {
+  text-align: center;
+}
+.my-modal-body {
+  text-align: center;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px rgb(64, 64, 64);
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    text-align: center;
+  }
+  .nav-link:hover {
+    outline: none;
+    background-color: var(--secondaryHover);
+    color: var(--black) !important;
+  }
+
+  .card {
+    width: 90vw !important;
+    aspect-ratio: 4/3 !important;
+  }
+  .loginContainer,
+  .footerContainer {
+    width: 100% !important;
+  }
+  .course-creation-container {
+    width: 100%;
+  }
+  .submitButtonCustom {
+    width: 100%;
+    padding: 0.5rem 2rem !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .loginForm {
+    min-width: 100%;
+  }
+}
+
+
+
